@@ -40,6 +40,7 @@
    # Work on Time-Entry so we can eval it
    $t_time_value = plugin_TimeTracking_hhmm_to_minutes($f_time_value);
    $t_time_value = doubleval($t_time_value / 60);
+   $t_time_value = str_replace(',', '.', $t_time_value);
 
    # Trigger in case of non-evaluable entry
    if ( $t_time_value == 0 ) {
